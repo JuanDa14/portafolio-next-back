@@ -3,10 +3,19 @@ export const projects = [
 		title: 'Portafolio',
 		description:
 			'Proyecto personal para mostrar mis habilidades y proyectos. Aprendi a utilizar mejor Docker por lo que el proyecto esta alojado en un contenedor de Docker.',
-		imageUrl: '/imgs/coding.jpg',
+		imageUrl:
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1668108011/Desktop_10-11-2022_14-19-51-72_oysmls.png',
 		githubUrl: 'https://github.com/JuanDa14/portafolio-nextjs',
 		websiteUrl: 'https://juancode.vercel.app',
-		technologies: ['nextjs', 'React', 'TypeScript', 'Tailwind Css', 'MongoDB', 'Mongoose'],
+		technologies: [
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/nextjs_kniyam.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/react_ikpzix.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138348/icons/typescript_i5fljm.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/tailwind-css_jgoa9f.png',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/nodejs_ppg1xg.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138345/icons/express_sgjg4c.png',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138346/icons/mongodb_xdiytd.svg',
+		],
 	},
 	{
 		title: 'Treelink',
@@ -15,7 +24,14 @@ export const projects = [
 		imageUrl: '/imgs/coding.jpg',
 		githubUrl: 'https://github.com/JuanDa14/treelink-frontend',
 		websiteUrl: 'https://treeliink.vercel.app',
-		technologies: ['react', 'JavaScript', 'Tailwind Css', 'MongoDB', 'Mongoose', 'Axios'],
+		technologies: [
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/react_ikpzix.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138346/icons/javascript_d82qup.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/tailwind-css_jgoa9f.png',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/nodejs_ppg1xg.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138345/icons/express_sgjg4c.png',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138346/icons/mongodb_xdiytd.svg',
+		],
 	},
 	{
 		title: 'Proximamente',
@@ -24,7 +40,16 @@ export const projects = [
 		imageUrl: '/imgs/coding.jpg',
 		githubUrl: 'https://github.com/JuanDa14',
 		websiteUrl: 'https://juancode.vercel.app',
-		technologies: ['react', 'TypeScript', 'Tailwind Css', 'MongoDB', 'Mongoose', 'Docker'],
+		technologies: [
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/nextjs_kniyam.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/react_ikpzix.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138348/icons/typescript_i5fljm.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/tailwind-css_jgoa9f.png',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/nodejs_ppg1xg.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138345/icons/express_sgjg4c.png',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/mysql_is4pxz.png',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138345/icons/graphql_nksj2d.svg',
+		],
 	},
 	{
 		title: 'Proximamente',
@@ -33,6 +58,12 @@ export const projects = [
 		imageUrl: '/imgs/coding.jpg',
 		githubUrl: 'https://github.com/JuanDa14',
 		websiteUrl: 'https://juancode.vercel.app',
-		technologies: ['nextjs', 'React', 'TypeScript', 'Tailwind Css', 'MongoDB', 'Mongoose'],
+		technologies: [
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138345/icons/laravel_fdkwls.png',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/php_bitdod.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138346/icons/javascript_d82qup.svg',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/mysql_is4pxz.png',
+			'https://res.cloudinary.com/dbvyaguam/image/upload/v1669138347/icons/tailwind-css_jgoa9f.png',
+		],
 	},
 ];
