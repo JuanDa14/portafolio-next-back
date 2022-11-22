@@ -24,10 +24,10 @@ const transporter = () => {
 exports.transporter = transporter;
 const template = (name, email, subject, message) => {
     return `
-        <h2>Hi ${name},</h2>
-        <p>Thanks for signing up!</p>
-        <p>${email}</p>
-        <p>Please click this link to activate your account:</p>
+        <h2>Nombre: ${name},</h2>
+        <p>Email: ${email}</p>
+		<p>Asunto :${subject}</p>
+        <p>Mensaje: ${message}</p>
     `;
 };
 const sendEmail = (name, email, subject, message) => __awaiter(void 0, void 0, void 0, function* () {
