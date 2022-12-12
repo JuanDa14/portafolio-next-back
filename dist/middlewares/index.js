@@ -18,3 +18,4 @@ __exportStar(require("./index"), exports);
 __exportStar(require("./validate-data"), exports);
 __exportStar(require("./validate-file"), exports);
 __exportStar(require("./validate-req"), exports);
+__exportStar(require("./validate-url"), exports);

@@ -1,19 +1,19 @@
 import { Router } from 'express';
 import { check, oneOf } from 'express-validator';
 
-import { validationsReq, validateFile, isExistAbilityInDB } from '../middlewares';
+import { validationsReq, validateFile, isExistAbilityInDB, validationUrl } from '../middlewares';
 import { createAbility, getAbilities } from './../controllers';
 
 const router = Router();
 
-router.get('/', getAbilities);
+router.get('/', validationUrl, getAbilities);
 
 router.post(
 	'/',
 	[
+		validationUrl,
 		check('name').notEmpty().isString().trim(),
 		check('name').custom(isExistAbilityInDB),
-
 		oneOf([
 			check('type').equals('Frontend').isString().trim(),
 			check('type').equals('Backend').isString().trim(),

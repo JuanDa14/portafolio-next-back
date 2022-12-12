@@ -5,8 +5,9 @@ const express_validator_1 = require("express-validator");
 const middlewares_1 = require("../middlewares");
 const controllers_1 = require("./../controllers");
 const router = (0, express_1.Router)();
-router.get('/', controllers_1.getAbilities);
+router.get('/', middlewares_1.validationUrl, controllers_1.getAbilities);
 router.post('/', [
+    middlewares_1.validationUrl,
     (0, express_validator_1.check)('name').notEmpty().isString().trim(),
     (0, express_validator_1.check)('name').custom(middlewares_1.isExistAbilityInDB),
     (0, express_validator_1.oneOf)([
