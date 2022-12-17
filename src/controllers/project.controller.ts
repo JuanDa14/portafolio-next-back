@@ -5,15 +5,7 @@ import { IProject } from '../interfaces/project';
 import { saveFiles } from '../config';
 import { FileArray } from 'express-fileupload';
 
-type Data =
-	| {
-			ok: boolean;
-			data: IProject[] | IProject;
-	  }
-	| {
-			ok: boolean;
-			message: string;
-	  };
+type Data = IProject | IProject[] | { ok: boolean; message: string };
 
 export const getProjects = async (req: Request, res: Response<Data>) => {
 	try {
@@ -21,10 +13,7 @@ export const getProjects = async (req: Request, res: Response<Data>) => {
 			.select('title description date technologies imageUrl githubUrl websiteUrl updatedAt')
 			.lean();
 
-		res.status(200).json({
-			ok: true,
-			data: projects,
-		});
+		res.status(200).json(projects);
 	} catch (error) {
 		res.status(500).json({
 			ok: false,
@@ -42,10 +31,7 @@ export const createProject = async (req: Request, res: Response) => {
 			imageUrl: message,
 		});
 
-		res.status(201).json({
-			ok: true,
-			data: project,
-		});
+		res.status(201).json(project);
 	} catch (error) {
 		res.status(500).json({
 			ok: false,

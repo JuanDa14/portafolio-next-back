@@ -19,10 +19,7 @@ const createAbility = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     try {
         const { message } = yield (0, config_1.saveFiles)(req.files, '', 'abilities', req.method);
         const newAbility = yield Ability_1.default.create(Object.assign(Object.assign({}, req.body), { imageUrl: message }));
-        res.status(201).json({
-            ok: true,
-            data: newAbility,
-        });
+        res.status(201).json(newAbility);
     }
     catch (error) {
         res.status(500).json({
@@ -35,10 +32,7 @@ exports.createAbility = createAbility;
 const getAbilities = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const abilities = yield Ability_1.default.find().select('-__v -createdAt -updatedAt').lean();
-        res.status(200).json({
-            ok: true,
-            data: abilities,
-        });
+        res.status(200).json(abilities);
     }
     catch (error) {
         res.status(500).json({

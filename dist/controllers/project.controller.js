@@ -20,10 +20,7 @@ const getProjects = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         const projects = yield Project_1.default.find()
             .select('title description date technologies imageUrl githubUrl websiteUrl updatedAt')
             .lean();
-        res.status(200).json({
-            ok: true,
-            data: projects,
-        });
+        res.status(200).json(projects);
     }
     catch (error) {
         res.status(500).json({
@@ -37,10 +34,7 @@ const createProject = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     try {
         const { message } = yield (0, config_1.saveFiles)(req.files, '', 'projects', req.method);
         const project = yield Project_1.default.create(Object.assign(Object.assign({}, req.body), { imageUrl: message }));
-        res.status(201).json({
-            ok: true,
-            data: project,
-        });
+        res.status(201).json(project);
     }
     catch (error) {
         res.status(500).json({
