@@ -1,17 +1,17 @@
 import { Router } from 'express';
 import { check } from 'express-validator';
 
-import { validationsReq, validateFile, isExistProjectInDB, validationUrl } from '../middlewares';
+import { validationsReq, validateFile, isExistProjectInDB, validationOrigin } from '../middlewares';
 import { getProjects, createProject } from '../controllers';
 
 const router = Router();
 
-router.get('/', validationUrl, getProjects);
+router.get('/', validationOrigin, getProjects);
 
 router.post(
 	'/',
 	[
-		validationUrl,
+		validationOrigin,
 		check('title').notEmpty().isString().trim(),
 		check('title').custom(isExistProjectInDB),
 

@@ -1,14 +1,14 @@
 import { NextFunction, Request, Response } from 'express';
 
-const url = process.env.FRONTEND_URL;
+const whiteList = [process.env.FRONTEND_URL as string];
 
 type Data = {
 	ok: boolean;
 	message: string;
 };
 
-export const validationUrl = (req: Request, res: Response<Data>, next: NextFunction) => {
-	if (req.headers.origin === url) {
+export const validationOrigin = (req: Request, res: Response<Data>, next: NextFunction) => {
+	if (whiteList.includes(process.env.FRONTEND_URL as string)) {
 		next();
 	} else {
 		return res.status(400).json({

@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { seedData } from '../controllers';
-import { validationUrl } from '../middlewares';
+import { validationOrigin } from '../middlewares';
 
 const router = Router();
 
-router.get('/', validationUrl, seedData);
+router.get('/', validationOrigin, seedData);
 
 export default router;
