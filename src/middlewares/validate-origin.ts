@@ -6,7 +6,7 @@ type Data = {
 };
 
 export const validationOrigin = (req: Request, res: Response<Data>, next: NextFunction) => {
-	if (req.headers.origin === (process.env.FRONTEND_URL as string)) {
+	if (req.headers.origin?.toString() === process.env.FRONTEND_URL) {
 		next();
 	} else {
 		return res.status(400).json({
