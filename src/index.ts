@@ -20,7 +20,7 @@ db();
 
 //Middlewares
 //TODO Activar cuando se tenga el frontend
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(

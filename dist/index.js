@@ -42,7 +42,7 @@ const app = (0, express_1.default)();
 (0, config_1.db)();
 //Middlewares
 //TODO Activar cuando se tenga el frontend
-app.use((0, cors_1.default)());
+app.use((0, cors_1.default)(corsOptions));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use((0, express_fileupload_1.default)({
